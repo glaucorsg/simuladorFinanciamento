@@ -3,11 +3,11 @@ function simular() {
   var prazo = document.getElementById("prazo").valueAsNumber;
   var jurosaa = document.getElementById("jurosaa").valueAsNumber;
 
-  var prestacoes = prazo * 12;
+  var prestacoes = prazo*12;
   var jurosam = (1 + jurosaa) ** (1 / 12) - 1;
   var amortizacao = valor / prestacoes;
 
-  document.getElementById("prestacoes").valueAsNumber = amortizacao.toFixed(2);
+  document.getElementById("prestacoes").valueAsNumber = prestacoes;
   document.getElementById("jurosam").valueAsNumber = jurosam;
 
   var tbody = document.querySelector("tbody");
